@@ -80,7 +80,7 @@ public class Contacts {
 	public void setMobNumber(long mobNumber) {
 		this.mobNumber = mobNumber;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Contacts [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city=" + city

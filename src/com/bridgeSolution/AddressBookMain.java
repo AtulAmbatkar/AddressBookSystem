@@ -6,14 +6,22 @@ public class AddressBookMain {
 		
 		System.out.println("Welcome to Address Book");
 		
-		AddressBook ab = new AddressBook();
+		AddressBook addBook = new AddressBook();
 		
 		Contacts con = new Contacts("Atul","Ambatkar","At.karve","Pune","Maharashtra",411052,8605971384L);
 		Contacts con1 = new Contacts("Rushi","Ambatkar","At.karve","Pune","Maharashtra",411052,9763182726L);
 		
-		ab.add(con);
-		ab.add(con1);
+		addBook.addContact(con);
+		addBook.addContact(con1);
 		
-		System.out.println(ab);
+//		before editing name
+		System.out.println(addBook);
+		
+		addBook.editContactByName(args[0],args[1],con);
+		
+//		after diting name by existing contact data
+		System.out.println(addBook);
+		
+		
 	}
 }
