@@ -8,7 +8,7 @@ public class AddressBook {
 	private int element;
 	
 	public AddressBook() {
-		elementData  = new Object[1];
+		elementData  = new Object[2];
 	}
 
 	public void add(Object obj) {
