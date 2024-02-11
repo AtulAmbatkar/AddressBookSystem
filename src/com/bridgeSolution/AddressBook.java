@@ -1,5 +1,6 @@
 package com.bridgeSolution;
 
+import java.rmi.Remote;
 import java.util.Arrays;
 
 public class AddressBook {
@@ -18,12 +19,22 @@ public class AddressBook {
 		}
 	}
 	
-	public void editContactByName(String name , String name1 , Contacts con) {
-		if(!(name.equals(con.getFirstName()) && name1.equals(con.getLastName()))) {
+	public void editContactByName(String firstName , String lastName , Contacts con) {
+		if(!(firstName.equals(con.getFirstName()) && lastName.equals(con.getLastName()))) {
 			
-			con.setFirstName(name);
-			con.setLastName(name1);
+			con.setFirstName(firstName);
+			con.setLastName(lastName);
 		}
+	}
+	
+	public void deleteContactByName(String firstName,String lastName,Contacts con) {
+		
+		if(firstName.equals(con.getFirstName()) && lastName.equals(con.getLastName())) {
+			
+			con.setFirstName(null);
+			con.setLastName(null);
+		}
+		
 	}
 	
 	@Override

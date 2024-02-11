@@ -15,12 +15,18 @@ public class AddressBookMain {
 		addBook.addContact(con1);
 		
 //		before editing name
-		System.out.println(addBook);
+		System.out.println("\nAdded Contacts in AddressBook:  " + addBook);
 		
 		addBook.editContactByName(args[0],args[1],con);
 		
-//		after diting name by existing contact data
-		System.out.println(addBook);
+//		after editing name by existing contact data
+		System.out.println("\nAfter Editing byName: " + addBook);
+		
+//		delete existing contcts by name
+		
+		addBook.deleteContactByName(args[2], args[3], con);
+		
+		System.out.println("\nAfter delete name: " + addBook);
 		
 		
 	}
